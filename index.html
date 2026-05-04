@@ -18,6 +18,14 @@
 <body>
     <div class="bg-glow"></div>
     <div class="particles" id="particles"></div>
+
+    <header class="top-nav">
+        <div class="lang-switcher">
+            <button class="lang-btn active" data-lang="uz">UZ</button>
+            <button class="lang-btn" data-lang="ru">RU</button>
+            <button class="lang-btn" data-lang="en">EN</button>
+        </div>
+    </header>
     
     <main class="container">
         <section class="profile-card animate-fade-in">
@@ -27,20 +35,32 @@
             </div>
             
             <h1 class="name">Odilxon Ahmadaliyev</h1>
-            <p class="tagline">Creative Explorer & Tech Enthusiast</p>
+            <p class="tagline" data-i18n="tagline">Creative Explorer & Tech Enthusiast</p>
             
-            <div class="info-grid-compact">
+            <button class="about-trigger" id="aboutBtn">
+                <i data-lucide="user"></i>
+                <span data-i18n="about_me">Men haqimda</span>
+            </button>
+
+            <div class="info-grid-compact" id="aboutContent" style="display: none;">
                 <div class="info-pill">
-                    <span class="label">Telefon:</span>
+                    <span class="label" data-i18n="phone">Telefon:</span>
                     <a href="tel:+998991888451" class="value">+998 99 188 84 51</a>
                 </div>
                 <div class="info-pill">
-                    <span class="label">Manzil:</span>
+                    <span class="label" data-i18n="address">Manzil:</span>
                     <span class="value">Namangan, Sarkor</span>
                 </div>
             </div>
 
             <div class="social-links">
+                <!-- Project Button -->
+                <a href="quiz.html" class="social-btn project-btn">
+                    <i data-lucide="car"></i>
+                    <span data-i18n="auto_maktab">Auto Maktab Test</span>
+                    <span class="badge">New</span>
+                </a>
+
                 <a href="https://instagram.com/odi_lbek_2009_" target="_blank" class="social-btn instagram">
                     <i data-lucide="instagram"></i>
                     <span>Instagram</span>
@@ -53,13 +73,9 @@
                     <i data-lucide="linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="#" class="social-btn github">
-                    <i data-lucide="github"></i>
-                    <span>GitHub</span>
-                </a>
                 <button class="social-btn qr-trigger" id="qrBtn">
                     <i data-lucide="qr-code"></i>
-                    <span>Mening QR Kodim</span>
+                    <span data-i18n="qr_code">Mening QR Kodim</span>
                 </button>
             </div>
         </section>
