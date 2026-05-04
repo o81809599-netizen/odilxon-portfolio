@@ -26,8 +26,26 @@
     </header>
 
     <main class="quiz-container">
+        <!-- Registration Section -->
+        <section id="registrationArea" class="quiz-card animate-fade-in">
+            <div class="quiz-header">
+                <i data-lucide="user-plus" class="header-icon"></i>
+                <h1 data-i18n="register">Ro'yxatdan o'tish</h1>
+                <p data-i18n="register_desc">Ma'lumotlaringizni kiriting</p>
+            </div>
+            <div class="form-grid">
+                <div class="input-group">
+                    <input type="text" id="userName" placeholder="Ism" required>
+                    <input type="text" id="userSurname" placeholder="Familiya" required>
+                    <input type="number" id="userId" placeholder="ID raqami (1, 2...)" min="1" required>
+                </div>
+                <p id="regError" class="error-msg" style="display: none;"></p>
+                <button class="restart-btn" id="startRegBtn" data-i18n="start_quiz">Testni boshlash</button>
+            </div>
+        </section>
+
         <!-- Level Selection -->
-        <section id="levelSelection" class="quiz-card animate-fade-in">
+        <section id="levelSelection" class="quiz-card animate-fade-in" style="display: none;">
             <div class="quiz-header">
                 <i data-lucide="car" class="header-icon"></i>
                 <h1 data-i18n="quiz_title">Auto Maktab Test</h1>
