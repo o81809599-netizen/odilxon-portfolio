@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="uz">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Odilxon Ahmadaliyev | Personal Portfolio</title>
+    <meta name="description" content="Odilxon Ahmadaliyev - Shaxsiy sayti. Instagram, Telegram va boshqa aloqa kanallari.">
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;800&display=swap" rel="stylesheet">
+    <!-- Lucide Icons -->
+    <script src="https://unpkg.com/lucide@latest"></script>
+    <!-- QR Code Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/qrcodejs/1.0.0/qrcode.min.js"></script>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="bg-glow"></div>
+    
+    <main class="container">
+        <section class="profile-card animate-fade-in">
+            <div class="profile-image-container">
+                <img src="profile.jpg" alt="Odilxon" class="profile-image" id="profileImg">
+                <div class="image-overlay"></div>
+            </div>
+            
+            <h1 class="name">Odilxon Ahmadaliyev</h1>
+            <p class="tagline">Creative Explorer & Tech Enthusiast</p>
+            
+            <div class="social-links">
+                <a href="https://instagram.com/odi_lbek_2009_" target="_blank" class="social-btn instagram" id="instagramLink">
+                    <i data-lucide="instagram"></i>
+                    <span>Instagram</span>
+                </a>
+                <a href="https://t.me/Odilhon2009" target="_blank" class="social-btn telegram" id="telegramLink">
+                    <i data-lucide="send"></i>
+                    <span>Telegram</span>
+                </a>
+                <a href="#" class="social-btn linkedin" id="linkedinLink">
+                    <i data-lucide="linkedin"></i>
+                    <span>LinkedIn</span>
+                </a>
+                <a href="#" class="social-btn github" id="githubLink">
+                    <i data-lucide="github"></i>
+                    <span>GitHub</span>
+                </a>
+            </div>
+        </section>
+
+        <section class="info-section animate-slide-up">
+            <div class="section-header">
+                <i data-lucide="user"></i>
+                <h2>Men haqimda ko'proq</h2>
+            </div>
+            <div class="info-grid">
+                <div class="info-item">
+                    <span class="label">Ism</span>
+                    <span class="value">Odilxon</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Familiya</span>
+                    <span class="value">Ahmadaliyev</span>
+                </div>
+                <div class="info-item">
+                    <span class="label">Telefon</span>
+                    <a href="tel:+998991888451" class="value link">+998 99 188 84 51</a>
+                </div>
+                <div class="info-item full-width">
+                    <span class="label">Turar joy</span>
+                    <span class="value">Namangan, MFY Sarkor, Chorvador ko'cha, uy 38</span>
+                </div>
+            </div>
+        </section>
+
+        <section class="qr-section animate-slide-up">
+            <div class="section-header">
+                <i data-lucide="qr-code"></i>
+                <h2>Ulashish uchun QR Kod</h2>
+            </div>
+            <div class="qr-container">
+                <div id="qrcode"></div>
+                <p class="qr-text">Odilxon (Odilbek) profilini ulashish</p>
+            </div>
+        </section>
+    </main>
+
+    <footer class="animate-fade-in">
+        <p>&copy; 2026 Odilxon Ahmadaliyev. Barcha huquqlar himoyalangan.</p>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
