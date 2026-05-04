@@ -40,4 +40,26 @@ document.addEventListener('DOMContentLoaded', () => {
             item.style.transform = 'translateY(0)';
         }, 100);
     });
+
+    // Generate random particles
+    const particlesContainer = document.getElementById('particles');
+    const particleCount = 20;
+
+    for (let i = 0; i < particleCount; i++) {
+        const particle = document.createElement('div');
+        particle.className = 'particle';
+        
+        const size = Math.random() * 5 + 2 + 'px';
+        const left = Math.random() * 100 + '%';
+        const delay = Math.random() * 10 + 's';
+        const duration = Math.random() * 10 + 10 + 's';
+        
+        particle.style.width = size;
+        particle.style.height = size;
+        particle.style.left = left;
+        particle.style.animationDelay = delay;
+        particle.style.animationDuration = duration;
+        
+        particlesContainer.appendChild(particle);
+    }
 });
