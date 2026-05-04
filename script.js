@@ -16,30 +16,36 @@ document.addEventListener('DOMContentLoaded', () => {
         correctLevel: QRCode.CorrectLevel.H
     });
 
-    // Add hover sound effect (optional/visual)
-    const socialBtns = document.querySelectorAll('.social-btn');
-    socialBtns.forEach(btn => {
-        btn.addEventListener('mouseenter', () => {
-            btn.style.borderColor = 'var(--accent-primary)';
-        });
-        btn.addEventListener('mouseleave', () => {
-            const type = btn.classList[1];
-            // Reset borders based on type if needed, or keep it subtle
-        });
+    // Modal Logic
+    const qrBtn = document.getElementById('qrBtn');
+    const qrModal = document.getElementById('qrModal');
+    const closeModal = document.getElementById('closeModal');
+
+    qrBtn.addEventListener('click', () => {
+        qrModal.classList.add('active');
     });
 
-    // Simple reveal animation for info items
-    const infoItems = document.querySelectorAll('.info-item');
-    infoItems.forEach((item, index) => {
-        item.style.opacity = '0';
-        item.style.transform = 'translateY(10px)';
-        item.style.transition = `all 0.5s ease-out ${0.3 + (index * 0.1)}s`;
-        
-        setTimeout(() => {
-            item.style.opacity = '1';
-            item.style.transform = 'translateY(0)';
-        }, 100);
+    closeModal.addEventListener('click', () => {
+        qrModal.classList.remove('active');
     });
+
+    // Close on outside click
+    window.addEventListener('click', (e) => {
+        if (e.target === qrModal) {
+            qrModal.classList.remove('active');
+        }
+    });
+
+    // Simple reveal animation
+    const profileCard = document.querySelector('.profile-card');
+    profileCard.style.opacity = '0';
+    profileCard.style.transform = 'translateY(20px)';
+    setTimeout(() => {
+        profileCard.style.transition = 'all 0.8s ease-out';
+        profileCard.style.opacity = '1';
+        profileCard.style.transform = 'translateY(0)';
+    }, 100);
+
 
     // Generate random particles
     const particlesContainer = document.getElementById('particles');

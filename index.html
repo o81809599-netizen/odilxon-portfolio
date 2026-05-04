@@ -29,61 +29,55 @@
             <h1 class="name">Odilxon Ahmadaliyev</h1>
             <p class="tagline">Creative Explorer & Tech Enthusiast</p>
             
+            <div class="info-grid-compact">
+                <div class="info-pill">
+                    <span class="label">Telefon:</span>
+                    <a href="tel:+998991888451" class="value">+998 99 188 84 51</a>
+                </div>
+                <div class="info-pill">
+                    <span class="label">Manzil:</span>
+                    <span class="value">Namangan, Sarkor</span>
+                </div>
+            </div>
+
             <div class="social-links">
-                <a href="https://instagram.com/odi_lbek_2009_" target="_blank" class="social-btn instagram" id="instagramLink">
+                <a href="https://instagram.com/odi_lbek_2009_" target="_blank" class="social-btn instagram">
                     <i data-lucide="instagram"></i>
                     <span>Instagram</span>
                 </a>
-                <a href="https://t.me/Odilhon2009" target="_blank" class="social-btn telegram" id="telegramLink">
+                <a href="https://t.me/Odilhon2009" target="_blank" class="social-btn telegram">
                     <i data-lucide="send"></i>
                     <span>Telegram</span>
                 </a>
-                <a href="#" class="social-btn linkedin" id="linkedinLink">
+                <a href="#" class="social-btn linkedin">
                     <i data-lucide="linkedin"></i>
                     <span>LinkedIn</span>
                 </a>
-                <a href="#" class="social-btn github" id="githubLink">
+                <a href="#" class="social-btn github">
                     <i data-lucide="github"></i>
                     <span>GitHub</span>
                 </a>
+                <button class="social-btn qr-trigger" id="qrBtn">
+                    <i data-lucide="qr-code"></i>
+                    <span>Mening QR Kodim</span>
+                </button>
             </div>
         </section>
 
-        <section class="info-section animate-slide-up">
-            <div class="section-header">
-                <i data-lucide="user"></i>
-                <h2>Men haqimda ko'proq</h2>
-            </div>
-            <div class="info-grid">
-                <div class="info-item">
-                    <span class="label">Ism</span>
-                    <span class="value">Odilxon</span>
+        <!-- QR Modal -->
+        <div class="modal" id="qrModal">
+            <div class="modal-content">
+                <button class="close-modal" id="closeModal">&times;</button>
+                <div class="section-header">
+                    <i data-lucide="qr-code"></i>
+                    <h2>Ulashish uchun QR Kod</h2>
                 </div>
-                <div class="info-item">
-                    <span class="label">Familiya</span>
-                    <span class="value">Ahmadaliyev</span>
-                </div>
-                <div class="info-item">
-                    <span class="label">Telefon</span>
-                    <a href="tel:+998991888451" class="value link">+998 99 188 84 51</a>
-                </div>
-                <div class="info-item full-width">
-                    <span class="label">Turar joy</span>
-                    <span class="value">Namangan, MFY Sarkor, Chorvador ko'cha, uy 38</span>
+                <div class="qr-container">
+                    <div id="qrcode"></div>
+                    <p class="qr-text">Odilxon (Odilbek) profilini ulashish</p>
                 </div>
             </div>
-        </section>
-
-        <section class="qr-section animate-slide-up">
-            <div class="section-header">
-                <i data-lucide="qr-code"></i>
-                <h2>Ulashish uchun QR Kod</h2>
-            </div>
-            <div class="qr-container">
-                <div id="qrcode"></div>
-                <p class="qr-text">Odilxon (Odilbek) profilini ulashish</p>
-            </div>
-        </section>
+        </div>
     </main>
 
     <footer class="animate-fade-in">
